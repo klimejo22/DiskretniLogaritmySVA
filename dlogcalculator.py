@@ -9,13 +9,18 @@ def discrete_log(a, x, n):
     value = 1
     for i in range(n):
         if value == i:
-            return "Vysledek je: " + i
+            return "Vysledek je: " + str(i)
         value = (value * a) % n
 
     return None
 
-a = input("Zadej zaklad logaritmu: ")
-x = input("Zadej X: ")
-n = input("Zadej modulo: ")
+game = True
+while (game):
+    a = input("Zadej zaklad logaritmu: ")
+    x = input("Zadej X: ")
+    n = input("Zadej modulo: ")
 
-print(discrete_log(a, x, n))
+    print(discrete_log(a, x, n))
+
+    if (input("Pro pokracovani 1: ") == "2"):
+        game = False
