@@ -1,3 +1,6 @@
+from libs import repeatDialog
+
+
 def discrete_log(a, x, n):
     a = int(a)
     x = int(x)
@@ -22,5 +25,4 @@ while (game):
 
     print(discrete_log(a, x, n))
 
-    if (input("Pro pokracovani 1: ") == "2"):
-        game = False
+    game = repeatDialog()

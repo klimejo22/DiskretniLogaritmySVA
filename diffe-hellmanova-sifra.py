@@ -2,6 +2,9 @@
 # x ... tajná hodnota (exponent)
 # n ... modulo
 
+from libs import repeatDialog
+
+
 game = True
 while game:
     g = int(input("Zadej spolecny zaklad: "))
@@ -13,5 +16,4 @@ while game:
 
     print("Vysledek je: ", r)
 
-    if (input("Pro pokracovani 1: ") == "2"):
-        game = False
+    game = repeatDialog()
