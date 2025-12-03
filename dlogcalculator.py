@@ -1,18 +1,27 @@
+# a ... základ
+# x ... tajná hodnota (exponent)
+# n ... modulo
+
+
 def discrete_log(a, x, n):
-    a = int(a)
-    x = int(x)
-    n = int(n)
+    try: 
+        a = int(a)
+        x = int(x)
+        n = int(n)
+    except ValueError:
+        print("Nekde je spatny vstup, pis jen cela cisla")
 
-    a %= n
-    x %= n
+    else:
+        a %= n
+        x %= n
 
-    value = 1
-    for i in range(n):
-        if value == i:
-            return "Vysledek je: " + str(i)
-        value = (value * a) % n
-
-    return None
+        value = 1
+        for i in range(n):
+            if value == i:
+                return "Vysledek je: " + str(i)
+            value = (value * a) % n
+        
+        return ""
 
 game = True
 while (game):
