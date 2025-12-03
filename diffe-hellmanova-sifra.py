@@ -2,9 +2,13 @@
 # x ... tajná hodnota (exponent)
 # n ... modulo
 
-from libs import repeatDialog
 
-
+def repeatDialog():
+    if (input("Pro pokracovani 1") == "2"):
+        return False
+    else:
+        return True
+    
 game = True
 while game:
     try:

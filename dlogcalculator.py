@@ -1,7 +1,12 @@
-# a ... základ
-# x ... tajná hodnota (exponent)
+# a ... základ logaritmu
+# x ... tajná hodnota
 # n ... modulo
 
+def repeatDialog():
+    if (input("Pro pokracovani 1") == "2"):
+        return False
+    else:
+        return True
 
 def discrete_log(a, x, n):
     try: 
