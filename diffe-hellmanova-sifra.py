@@ -2,6 +2,9 @@
 # x ... tajná hodnota (exponent)
 # n ... modulo
 
+from libs import repeatDialog
+
+
 game = True
 while game:
     try:
@@ -17,5 +20,4 @@ while game:
     except ValueError:
         print("Nekde je spatny vstup, pis jen cela cisla")
 
-    if (input("Pro pokracovani 1: ") == "2"):
-        game = False
+    game = repeatDialog()

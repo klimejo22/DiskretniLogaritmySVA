@@ -31,5 +31,4 @@ while (game):
 
     print(discrete_log(a, x, n))
 
-    if (input("Pro pokracovani 1: ") == "2"):
-        game = False
+    game = repeatDialog()
